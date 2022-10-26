@@ -4,10 +4,7 @@ import simplejson as json
 # https://developer.spotify.com/console/get-search-item/?q=blackpink&type=track&market=kr&limit=&offset=&include_external= 
 
 url = "https://api.spotify.com/v1/search"
-token ="BQDqHSHO9XiWhDJo83VIzKbTf6uSyaqTmkS60VsTNzKoe8-lmHPdlqUePPHWLgUIHYj1sxbSvTA1Yk5PQQINsO-1sMDsMXecH_mfg22c66jtBg9vjWp3KILdfIw6iXIF03utb_5xndohlO_-oJecoC9Zaxhjadtv1GfGuTjR5cCEkmwC88fWrTqAyXeXKjQ"
-#token = {'authorization' : 'Bearer BQCV1nb26WwP2eb4xLhPuFu5cGhT-K9A18xeG0KR84d3DPcocd8k-mfRQOxcDVZI3N3C47GvVTFSQuLY7RfQWVl1hqW02mceX3H5vSjUbb6WoYlbxXV7X8ymEsgqbz9gBzFSAfQVtL637DODpxKwU0vKHNrsvqVfxtcn5rc142zKX3Gqsiwrea9NeMuyYkI'}
-param = {'q' : 'blackpink','type' : 'track', 'market' : 'kr'}
-
+token ="BQDN7Ef3euMC60Quf5t5BtVxmSL1dI2gjiSKtC_528o-GVyvTnWIOq-RFpd5LLkYzxbCaJPICv4oTBUidUYFpaWpQXwXZ0bGTDIrcrmBR8ORoAxmEtoWilg1ZRkCURevMXWSIbUAr9UH1nRbdNYT5LUKMBLjhLicpsDO8Q8GAE7wpsKtSNipexdu7Fh7564"
 
 def spotify_song_name(arg1):
     response = requests.get('https://api.spotify.com/v1/search',
@@ -19,14 +16,14 @@ def spotify_song_name(arg1):
     song =""
 
     if status == 200:
-        print("success")
+        print("HTTP Request is successful")
+        print("The singer is "+data[0]['artists'][0]['name'])
         count=0
         for items in data:
             count += 1 
-            #print(count)
             for name in items['album']['name']:
-                song = song +" "+ str(name) 
-        return "A list of Black Pink's are "+ "\n" +song
+                print(str(count)+" song is "+items['album']['name'], end="\n")
+                break
     else:
         print("HTTP Status code 200 is not returned, and got ",status)
 
