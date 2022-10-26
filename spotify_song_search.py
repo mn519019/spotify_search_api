@@ -29,3 +29,16 @@ def spotify_song_name(arg1):
 
 
 print(spotify_song_name(str))
+#### Expected Output #####
+# HTTP Request is successful
+# The singer is BLACKPINK
+# 1 song is BORN PINK
+# 2 song is Pink Venom
+# 3 song is SQUARE UP
+# 4 song is As If It's Your Last
+# .....
+# 17 song is BORN PINK
+# 18 song is BORN PINK
+# 19 song is BORN PINK
+# 20 song is BORN PINK
+# True
