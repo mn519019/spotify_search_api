@@ -5,7 +5,7 @@ We will find  a full list of songs using spotify's API
 ## spotify-api-json-parse
 Json file parsing using Spotify's APIs result
 
-- A python script to parse JSON data using one of the Spotify's APIs. =
+- A python script to parse JSON data using one of the Spotify's APIs (search api in this case)
 
 ## Requirement
 - python 3 
