@@ -9,7 +9,7 @@ Json file parsing using Spotify's APIs result
 
 ## Requirement
 - python 3 
-- Your own api toekn from Spotify's website
+- Your own api token from Spotify's website
 - Understanding the queried JSON structure Main Json Obj vs Array of objects (dictionary)
 
 ## Approach 
